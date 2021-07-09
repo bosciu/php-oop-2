@@ -1,5 +1,6 @@
 <?php
-    class User{
+    require_once __DIR__ . "/CreditCard.php";
+    class User extends CreditCard{
         private $name;
         private $surname;
         private $age;
@@ -17,9 +18,6 @@
             $this->ordersHistory = $ordersHistory;
         }
 
-        public function setCreditCard($cardNumber){
-            $this->creditCard = $cardNumber;
-        }
 
         public function setOrdersHistory($orders){
             $this->ordersHistory = $orders;
