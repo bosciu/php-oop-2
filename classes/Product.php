@@ -25,9 +25,6 @@
         public function getPrice(){
             $price = $this->price;
             $this->getDiscount();
-            $this->discount;
-            return $price - ($price * $this->discount / 100);
+            return number_format($price - ($price * $this->discount / 100), 2,",",".");
         }
     }
-
-    /* afterDiscount=price - ( price*discount/100 ); */
