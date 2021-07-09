@@ -21,8 +21,8 @@
 
         echo "<h1>Utente</h1>";
         $user = new User("Gianni", "Bertolini", 25, "prova@email.it");
-        var_dump($user);
         $user->setCreditCard("0000 0000 0000 0000");
+        $user->setOrdersHistory(["ordine1", "ordine2", "ordine3", "ordine4"]);
         var_dump($user);
 
     ?>
