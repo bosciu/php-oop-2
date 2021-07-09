@@ -14,8 +14,9 @@
 <body>
     <?php
         echo "<h1>Prodotto</h1>";
-        $product = new Product("Elettronica", "Lampadina", 7,"prova");
+        $product = new Product("Elettronica", "Lampadina", 7,"prova", "Informatica");
         $product->setPrice(10);
+        echo $product->getPrice();
         var_dump($product);
 
         echo "<h1>Utente</h1>";
