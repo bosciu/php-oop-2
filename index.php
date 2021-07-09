@@ -1,6 +1,7 @@
 <?php 
     require_once __DIR__ . "/classes/Product.php";
     require_once __DIR__ . "/classes/User.php";
+    require_once __DIR__ . "/classes/CreditCard.php";
 ?>
 
 <!DOCTYPE html>
@@ -21,10 +22,9 @@
 
         echo "<h1>Utente</h1>";
         $user = new User("Gianni", "Bertolini", 25, "prova@email.it");
-        $user->setCreditCard("0000", "10/10/10", "444");
         $user->setOrdersHistory(["ordine1", "ordine2", "ordine3", "ordine4"]);
-        $card = new CreditCard();
-        $card->setCreditCard("0000", "10/10/10", "555");
+        $obj = new CreditCard("0000", "10/10/10", "555");
+        $user->insertCreditCard($obj->getCreditCard());
         var_dump($user);
 
 

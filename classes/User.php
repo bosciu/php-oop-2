@@ -1,13 +1,12 @@
 <?php
-    require_once __DIR__ . "/CreditCard.php";
-    class User extends CreditCard{
+    class User{
         private $name;
         private $surname;
         private $age;
         private $email;
-        private $creditCard;
         private $ordersHistory;
         private $personalDiscount = 0;
+        private $creditCard = [];
 
         function __construct($name, $surname, $age, $email, $ordersHistory = [2,2,2,])
         {
@@ -30,5 +29,9 @@
             }else if(count($this->ordersHistory)>2){
                 $this->personalDiscount = 10;
             }
+        }
+
+        public function insertCreditCard($creditCard){
+            $this->creditCard = $creditCard;
         }
     }
