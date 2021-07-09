@@ -14,7 +14,6 @@
             $this->name = $name;
             $this->quantity = $quantity;
             $this->imageUrl = $imageUrl;
-            $this->categoryName = $categoryName;
         }
 
         public function setPrice($price){

@@ -14,13 +14,15 @@
 <body>
     <?php
         echo "<h1>Prodotto</h1>";
-        $product = new Product("Elettronica", "Lampadina", 7,"prova", "informatica");
+        $product = new Product("Elettronica", "Lampadina", 7,"prova", "alimentari");
         $product->setPrice(10);
         echo $product->getPrice();
         var_dump($product);
 
         echo "<h1>Utente</h1>";
         $user = new User("Gianni", "Bertolini", 25, "prova@email.it");
+        var_dump($user);
+        $user->setCreditCard("0000 0000 0000 0000");
         var_dump($user);
 
     ?>
